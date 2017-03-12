@@ -7,28 +7,56 @@
   </head>
   <body>
     <div id="nav-container">
-      <div id="about" class="col">
+      <a href="#about-page" id="about" class="col">
         <div class="content">
           <h2>Me & Journey</h2>
         </div>
-      </div>
+        <div class="next">
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+      </a>
       <div id="skills" class="col">
         <div class="content">
           <h2>Skills</h2>
+          <div class="skills-container">
+            <h4>Code</h4>
+            <ul class="skills-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Javascript</li>
+              <li>React.js & Vue.js</li>
+            </ul>
+            <h4>Tools</h4>
+            <ul class="skills-list">
+              <li>Sketch</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe XD</li>
+            </ul>
+            <h4>Video</h4>
+            <ul class="skills-list">
+              <li>Adobe Premiere</li>
+              <li>Adobe After Effects</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div id="work" class="col">
+      <a href="#work-page" id="work" class="col">
         <div class="content">
-
+          <h2>Create & Play</h2>
         </div>
-        <h2>Create & Play</h2>
-      </div>
+        <div class="next">
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </div>
+      </a>
       <div id="contact" class="col">
         <div class="content">
           <h2>Say Hi</h2>
           <div class="contact-info-container">
             <div class="mail contact-item">
-              <p class="label">Mail</p>
+              <p class="label">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                Mail
+              </p>
               <a
                 href="mailto:tim.thuis@gmail.com?subject=Hi Tim"
                 target="_blank"
@@ -38,7 +66,10 @@
               </a>
             </div>
             <div class="linkedin contact-item">
-              <p class="label">Linkedin</p>
+              <p class="label">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                Linkedin
+              </p>
               <a
                 class="link"
                 target="_blank"
@@ -48,7 +79,10 @@
               </a>
             </div>
             <div class="github contact-item">
-              <p class="label">Github</p>
+              <p class="label">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+                Github
+              </p>
               <a
                 href="https://github.com/TimThuis"
                 target="_blank"
@@ -58,7 +92,10 @@
               </a>
             </div>
             <div class="phone contact-item">
-              <p class="label">Phone</p>
+              <p class="label">
+                <i class="fa fa-phone-square" aria-hidden="true"></i>
+                Phone
+              </p>
               <a
                 href="tel:+31615832991"
                 class="link"
@@ -66,13 +103,21 @@
                 + 31 6 15 83 29 91
               </a>
             </div>
-
           </div>
         </div>
       </div>
     </div>
+    <div id="about-page" class="page">
+      About Page
+    </div>
+    <div id="work-page" class="page">
+      Work Page
+    </div>
   </body>
 
+  <script src="https://use.fontawesome.com/32495f95f7.js"></script>
   <script src="https://unpkg.com/vue"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="./main.js"></script>
 </html>

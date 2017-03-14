@@ -218,7 +218,7 @@ body {
 
 #work-page {
   position: relative;
-  background: linear-gradient(to bottom, var(--litegray) 20%, var(--blue) 20%);
+  background: var(--blue);
   color: white;
 }
 
@@ -244,11 +244,17 @@ body {
     }
   }
 }
-
-.progress {
-    height: 300px;
-}
-.progress > svg {
-    height: 100%;
-    display: block;
+#work-page {
+  position: relative;
+  display: flex;
+  .project-box {
+    width: 100px;
+    height: 100px;
+    background: white;
+    transition: all 1s ease;
+    &:hover {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
 }

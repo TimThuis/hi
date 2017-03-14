@@ -1,14 +1,3 @@
-window.onload = function onLoad() {
-  var circle = new ProgressBar.Circle('#progress', {
-    color: '#FCB03C',
-    duration: 3000,
-    easing: 'easeInOut'
-  });
-
-  circle.animate(1);
-};
-
-
 let skills = document.querySelector("#skills");
 
 // event listener for hover and leave on skills element and calling animation

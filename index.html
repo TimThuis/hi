@@ -4,6 +4,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="./style.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <script src="https://unpkg.com/vue"></script>
   </head>
   <body>
     <div id="nav-container">
@@ -16,29 +17,35 @@
         </div>
       </a>
       <div id="skills" class="col">
-        <div class="content">
-          <h2>Skills</h2>
-          <div class="skills-container">
-            <h4>Code</h4>
-            <ul class="skills-list">
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Javascript</li>
-              <li>React.js & Vue.js</li>
-            </ul>
-            <h4>Tools</h4>
-            <ul class="skills-list">
-              <li>Sketch</li>
-              <li>Adobe Photoshop</li>
-              <li>Adobe XD</li>
-            </ul>
-            <h4>Video</h4>
-            <ul class="skills-list">
-              <li>Adobe Premiere</li>
-              <li>Adobe After Effects</li>
-            </ul>
+          <div class="content">
+            <div class="header-container">
+              <h2>Skills</h2>
+            </div>
+            <div id="code" class="skills-container">
+              <h4>Code</h4>
+              <ul>
+                <li>HTML5<div style="width:75%" class="process-bar"></div></li>
+                <li>CSS3 & SASS<div style="width:100%" class="process-bar"></div></li>
+                <li>Javascript<div style="width:50%" class="process-bar"></div></li>
+                <li>React.js & Vue.js<div style="width:40%" class="process-bar"></div></li>
+              </ul>
+            </div>
+            <div id="tools" class="skills-container">
+              <h4>Tools</h4>
+              <ul>
+                <li>Sketch<div style="width:75%" class="process-bar"></div></li>
+                <li>Adobe Photoshop<div style="width:60%" class="process-bar"></div></li>
+                <li>Adobe XD<div style="width:75%" class="process-bar"></div></li>
+              </ul>
+            </div>
+            <div id="video" class="skills-container">
+              <h4>Video</h4>
+              <ul>
+                <li>Adobe Premiere<div style="width:75%" class="process-bar"></div></li>
+                <li>Adobe After Effects<div style="width:50%" class="process-bar"></div></li>
+              </ul>
+            </div>
           </div>
-        </div>
       </div>
       <a href="#work-page" id="work" class="col">
         <div class="content">
@@ -108,16 +115,21 @@
       </div>
     </div>
     <div id="about-page" class="page">
-      About Page
+      <h3>About Page</h3>
     </div>
     <div id="work-page" class="page">
-      Work Page
+      <h3>Work Page</h3>
+      <div class="progress" id="progress"></div>
+      <a href="#nav-container" class="and-up">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        <p>to the top</p>
+      </a>
     </div>
   </body>
 
   <script src="https://use.fontawesome.com/32495f95f7.js"></script>
-  <script src="https://unpkg.com/vue"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/0.5.6/dist/progressbar.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="./main.js"></script>
 </html>

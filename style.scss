@@ -3,7 +3,7 @@
   --blue: #30415D;
   --black: #031424;
   --gray: #8EAEBD;
-  --transparant-white: rgba(255,255,255,0.2);
+  --litegray: rgba(0,0,0,0.05);
 }
 
 * {
@@ -24,7 +24,7 @@ body {
 #nav-container {
   display: flex;
   height: 100vh;
-  background: black;
+  background: var(--litegray);
   h2 {
     text-align: center;
   }
@@ -41,7 +41,7 @@ body {
     background: var(--gray);
   }
   &:hover .col{
-    opacity: 0.75;
+    opacity: 0.5;
   }
 }
 
@@ -76,6 +76,7 @@ body {
   height: 0vh;
   h2 {
     text-transform: uppercase;
+    transition: all 300ms ease;
   }
   &:hover {
     flex: 2;
@@ -85,6 +86,9 @@ body {
     }
     .next {
       visibility: visible;
+    }
+    h2 {
+      font-size: 36px;
     }
   }
   .next {
@@ -117,15 +121,55 @@ body {
 }
 
 #skills {
+  align-items: flex-end;
   .content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .header-container {
+      margin: 32px 64px;
+    }
+    h2 {
+      margin: 0;
+    }
+  }
+  .skills-container {
+    width: 100%;
     overflow: hidden;
+    height: 0;
+    ul {
+      padding: 0;
+      margin: 0 0 32px 64px;
+    }
+    li {
+      padding: 8px 0;
+      padding-right: 128px;
+    }
+    .process-bar {
+      height: 3px;
+      background: var(--red);
+      margin-top: -8px;
+      width: 0;
+    }
+    h4 {
+      text-transform: uppercase;
+      margin: 32px 64px 16px 64px;
+      padding: 0;
+    }
   }
-  .skills-container{
-    height: 0px;
-    transition: height 300ms ease;
+  #code {
+    background: rgba(255,255,255,0.1);
   }
-  &:hover .skills-container {
-    height: 370px
+  #tools {
+    background: rgba(255,255,255,0.2);
+  }
+  #video {
+    background: rgba(255,255,255,0.3);
+  }
+  &:hover h2 {
+    text-align: left;
   }
 }
 
@@ -158,9 +202,53 @@ body {
 
 .page {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    margin: 0;
+  }
 }
 
 #about-page {
-  background: white;
+  background: var(--litegray);
   position: relative;
+  color: var(--black);
+}
+
+#work-page {
+  position: relative;
+  background: linear-gradient(to bottom, var(--litegray) 20%, var(--blue) 20%);
+  color: white;
+}
+
+.and-up {
+  position: absolute;
+  color: white;
+  bottom: 32px;
+  i {
+    font-size: 21px;
+  }
+  p {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    transition: all 300ms ease;
+    margin: 0 0 -4px 8px;
+    font-weight: 600;
+  }
+  &:hover  {
+    p {
+      width: 78px;
+    }
+  }
+}
+
+.progress {
+    height: 300px;
+}
+.progress > svg {
+    height: 100%;
+    display: block;
 }
